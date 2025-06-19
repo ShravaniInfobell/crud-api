@@ -39,3 +39,4 @@ def delete_item(item_id: str):
     if result.deleted_count == 0:
         raise HTTPException(status_code=404, detail="Item not found")
     return {"message": "Item deleted"}
+# new modified code
