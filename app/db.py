@@ -1,7 +1,7 @@
-import mongomock
-from bson.objectid import ObjectId
+from pymongo import MongoClient
+from bson import ObjectId
 
-client = mongomock.MongoClient()
+client = MongoClient("mongodb://host.docker.internal:27017/")  # Works inside Docker on Windows
 db = client["crud_db"]
 items_collection = db["items"]
 
