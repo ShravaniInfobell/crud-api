@@ -33,10 +33,10 @@ def update_item(item_id: str, item: Item):
         raise HTTPException(status_code=404, detail="Item not found")
     return {"message": "Item updated"}
 
-@app.delete("/items/{item_id}")
-def delete_item(item_id: str):
-    result = items_collection.delete_one({"_id": ObjectId(item_id)})
-    if result.deleted_count == 0:
-        raise HTTPException(status_code=404, detail="Item not found")
-    return {"message": "Item deleted"}
+# @app.delete("/items/{item_id}")
+# def delete_item(item_id: str):
+#     result = items_collection.delete_one({"_id": ObjectId(item_id)})
+#     if result.deleted_count == 0:
+#         raise HTTPException(status_code=404, detail="Item not found")
+#     return {"message": "Item deleted"}
 # new modified code
